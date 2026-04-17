@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neşeli Oyun Evi - Müşteri Takip Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Neşeli Oyun Evi - Takip Paneli</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Yeni Giriş</h2>
+            <form id="add-child-form">
+                <div class="form-group">
+                    <label for="child-name">Çocuğun Adı:</label>
+                    <input type="text" id="child-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Kalacağı Süre (Saat):</label>
+                    <input type="number" id="duration" min="0.5" step="0.5" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="hourly-rate">Saatlik Ücret (TL):</label>
+                    <input type="number" id="hourly-rate" min="0" step="1" value="200" required>
+                </div>
+                <button type="submit" class="btn btn-add">Girişi Başlat</button>
+            </form>
+        </section>
+
+        <section class="active-list">
+            <h2>Aktif Çocuklar</h2>
+            <div id="children-list">
+                </div>
+        </section>
+    </main>
+
+    <div id="bill-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Hesap Özeti</h2>
+            <div id="bill-details">
+                </div>
+            <button id="close-modal-btn" class="btn">Kapat</button>
+        </div>
+    </div>
+
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>

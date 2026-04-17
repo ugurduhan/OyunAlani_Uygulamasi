@@ -1,0 +1,224 @@
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #f0f8ff; /* Açık mavi gökyüzü */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+header {
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Form Alanı */
+.form-container, .active-list {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.form-container h2, .active-list h2 {
+    color: #ff6b6b;
+    border-bottom: 2px solid #feca57;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Önemli */
+}
+
+/* Butonlar */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.btn-add {
+    background-color: #48dbfb;
+    color: white;
+    width: 100%;
+}
+.btn-add:hover {
+    background-color: #0abde3;
+}
+
+.btn-extra {
+    background-color: #feca57;
+    color: #555;
+}
+.btn-extra:hover {
+    background-color: #e6b440;
+}
+
+.btn-finish {
+    background-color: #ff6b6b;
+    color: white;
+}
+.btn-finish:hover {
+    background-color: #ee5253;
+}
+
+
+/* Çocuk Kartları */
+#children-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.child-card {
+    background: #f9f9f9;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.child-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.child-card h3 {
+    margin-top: 0;
+    color: #0abde3;
+    font-size: 1.8rem;
+}
+
+.timer {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #10ac84; /* Yeşil */
+    margin: 10px 0;
+    display: block;
+}
+
+.child-card.time-up {
+    border-color: #ff6b6b;
+    background: #fff5f5;
+}
+
+.child-card.time-up .timer {
+    color: #ff6b6b;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.extras-list {
+    font-size: 0.9rem;
+    color: #555;
+}
+.extras-list li {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Modal (Hesap Özeti) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+}
+
+#bill-details p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#bill-details strong {
+    color: #333;
+}
+
+#bill-total {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #10ac84;
+    margin-top: 15px;
+    border-top: 2px dashed #eee;
+    padding-top: 15px;
+}
+
+/* Tablet ve Mobil için Ayar */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
