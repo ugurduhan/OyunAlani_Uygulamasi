@@ -1,6 +1,6 @@
 body {
     font-family: 'Baloo 2', cursive;
-    background-color: #f0f8ff; /* Açık mavi gökyüzü */
+    background-color: #f0f8ff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -135,7 +135,7 @@ header h1 {
 .timer {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #10ac84; /* Yeşil */
+    color: #10ac84; 
     margin: 10px 0;
     display: block;
 }
@@ -165,7 +165,7 @@ header h1 {
     padding-left: 0;
 }
 
-/* Modal (Hesap Özeti) */
+/* Hesap Özeti */
 .modal-overlay {
     position: fixed;
     top: 0;
