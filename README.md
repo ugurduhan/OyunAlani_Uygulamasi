@@ -20,13 +20,13 @@ Bu çalışma, bir işletmenin günlük operasyonel sürecini dijitalleştirmek 
 * **Storage:** LocalStorage API
 * **Audio:** Web Audio API (Sentezlenmiş uyarı sesleri)
 
-## 📂 Dosya Yapısı
+##  Dosya Yapısı
 * `index.html`: Uygulamanın iskeleti ve modal yapıları.
 * `style.css`: İşletmeye uygun canlı ve profesyonel tasarım öğeleri.
 * `app.js`: Tüm zamanlayıcı mantığı, hesaplama formülleri ve veri yönetimi.
 
-## 👤 Geliştirici
-**Uğur** *Yalova Üniversitesi - Bilgisayar Programcılığı 1. Sınıf Öğrencisi* **GANO:** 3.30
+##  Geliştirici
+**Uğur** *Yalova Üniversitesi - Bilgisayar Programcılığı 1. Sınıf Öğrencisi* 
 
 ---
 *Bu proje, gerçek dünya problemlerine yazılımsal çözümler üretme yetkinliğini göstermek amacıyla geliştirilmiştir.*
